@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -125,7 +126,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddAllCommand { get; }
+        public ICommand AddAllCommand { get; }
         private void AddAll()
         {
             if (searchSpace.AllWords is not null && searchSpace.AllWords.Length != 0)
@@ -138,7 +139,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddCommand { get; }
+        public ICommand AddCommand { get; }
         private void Add()
         {
             // TODO: should we add a warning about extra spaces here?
@@ -151,25 +152,25 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddLowerCommand { get; }
+        public ICommand AddLowerCommand { get; }
         private void AddLower()
         {
             AddToList(ConstantsFO.LowerCase.ToCharArray().Select(c => c.ToString()));
         }
 
-        public IReactiveCommand AddUpperCommand { get; }
+        public ICommand AddUpperCommand { get; }
         private void AddUpper()
         {
             AddToList(ConstantsFO.UpperCase.ToCharArray().Select(c => c.ToString()));
         }
 
-        public IReactiveCommand AddNumberCommand { get; }
+        public ICommand AddNumberCommand { get; }
         private void AddNumber()
         {
             AddToList(ConstantsFO.Numbers.ToCharArray().Select(c => c.ToString()));
         }
 
-        public IReactiveCommand AddSymbolCommand { get; }
+        public ICommand AddSymbolCommand { get; }
         private void AddSymbol()
         {
             AddToList(ConstantsFO.AllSymbols.ToCharArray().Select(c => c.ToString()));

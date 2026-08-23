@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -101,8 +102,8 @@ namespace FinderOuter.ViewModels
         public FontFamily CjkFont => FontFamily.Parse("Microsoft YaHei,Simsun,苹方-简,宋体-简");
 
 
-        public IReactiveCommand CopyCommand { get; protected set; }
-        public IReactiveCommand PasteCommand { get; protected set; }
+        public ICommand CopyCommand { get; protected set; }
+        public ICommand PasteCommand { get; protected set; }
 
         private string[] _copied = Array.Empty<string>();
         public string[] CopiedList
@@ -240,15 +241,15 @@ namespace FinderOuter.ViewModels
             IsProcessed = false;
         }
 
-        public IReactiveCommand StartCommand { get; protected set; }
+        public ICommand StartCommand { get; protected set; }
 
-        public IReactiveCommand NextCommand { get; }
+        public ICommand NextCommand { get; }
         public void Next()
         {
             Index++;
         }
 
-        public IReactiveCommand PreviousCommand { get; }
+        public ICommand PreviousCommand { get; }
         public void Previous()
         {
             Index--;
@@ -262,13 +263,13 @@ namespace FinderOuter.ViewModels
             set => this.RaiseAndSetIfChanged(ref _toAdd, value);
         }
 
-        public IReactiveCommand RemoveSelectedCommand { get; }
+        public ICommand RemoveSelectedCommand { get; }
         private void RemoveSelected()
         {
             CurrentItems?.Remove(SelectedItem);
         }
 
-        public IReactiveCommand ClearAllCommand { get; }
+        public ICommand ClearAllCommand { get; }
         private void ClearAll()
         {
             CurrentItems?.Clear();
@@ -318,9 +319,9 @@ namespace FinderOuter.ViewModels
             return exampleEnumerator.Current;
         }
 
-        public IReactiveCommand ExampleCommand { get; protected set; }
+        public ICommand ExampleCommand { get; protected set; }
 
-        public IReactiveCommand FindCommand { get; protected set; }
+        public ICommand FindCommand { get; protected set; }
         public abstract void Find();
     }
 }

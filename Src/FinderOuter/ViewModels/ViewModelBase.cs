@@ -7,6 +7,7 @@ using FinderOuter.Models;
 using FinderOuter.Services;
 using ReactiveUI;
 using System;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -33,7 +34,7 @@ namespace FinderOuter.ViewModels
 #pragma warning restore CA1822 // Mark members as static
 
         public IWindowManager WinMan { get; }
-        public IReactiveCommand OpenKBCommand { get; }
+        public ICommand OpenKBCommand { get; }
         public void OpenKB(KB kb) => WinMan.ShowDialog(new KnowledgeBaseViewModel(kb));
     }
 }

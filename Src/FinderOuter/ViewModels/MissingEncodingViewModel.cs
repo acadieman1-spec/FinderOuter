@@ -11,6 +11,7 @@ using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -135,7 +136,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand DecodeCommand { get; private set; }
+        public ICommand DecodeCommand { get; private set; }
         public void Decode(EncodingName name)
         {
             Result.Init();

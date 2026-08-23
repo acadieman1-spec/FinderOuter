@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -96,26 +97,26 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddAllCommand { get; }
+        public ICommand AddAllCommand { get; }
         private void AddAll()
         {
             AddToList(B16SearchSpace.AllChars);
         }
 
-        public IReactiveCommand AddNumbersCommand { get; }
+        public ICommand AddNumbersCommand { get; }
         private void AddNumbers()
         {
             AddToList(B16SearchSpace.AllChars.Where(c => char.IsDigit(c)));
         }
 
-        public IReactiveCommand AddLetersCommand { get; }
+        public ICommand AddLetersCommand { get; }
         private void AddLeters()
         {
             AddToList(B16SearchSpace.AllChars.Where(c => char.IsLetter(c)));
         }
 
 
-        public IReactiveCommand AddExactCommand { get; }
+        public ICommand AddExactCommand { get; }
         private void AddExact()
         {
             if (ToAdd is not null)

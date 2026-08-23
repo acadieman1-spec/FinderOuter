@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -93,31 +94,31 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddAllCommand { get; }
+        public ICommand AddAllCommand { get; }
         private void AddAll()
         {
             AddToList(MiniKeySearchSpace.AllChars);
         }
 
-        public IReactiveCommand AddLowerCommand { get; }
+        public ICommand AddLowerCommand { get; }
         private void AddLower()
         {
             AddToList(MiniKeySearchSpace.AllChars.Where(c => char.IsLower(c)));
         }
 
-        public IReactiveCommand AddUpperCommand { get; }
+        public ICommand AddUpperCommand { get; }
         private void AddUpper()
         {
             AddToList(MiniKeySearchSpace.AllChars.Where(c => char.IsUpper(c)));
         }
 
-        public IReactiveCommand AddNumberCommand { get; }
+        public ICommand AddNumberCommand { get; }
         private void AddNumber()
         {
             AddToList(MiniKeySearchSpace.AllChars.Where(c => char.IsDigit(c)));
         }
 
-        public IReactiveCommand AddSimilarCommand { get; }
+        public ICommand AddSimilarCommand { get; }
         private void AddSimilar()
         {
             ToAdd = ToAdd.Trim();
@@ -152,7 +153,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddExactCommand { get; }
+        public ICommand AddExactCommand { get; }
         private void AddExact()
         {
             ToAdd = ToAdd.Trim();

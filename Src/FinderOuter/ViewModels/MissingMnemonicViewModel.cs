@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Windows.Input;
 
 namespace FinderOuter.ViewModels
 {
@@ -170,13 +171,13 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddAllCommand { get; }
+        public ICommand AddAllCommand { get; }
         public void AddAll()
         {
             AddToList(searchSpace.allWords);
         }
 
-        public IReactiveCommand AddSimilarCommand { get; }
+        public ICommand AddSimilarCommand { get; }
         public void AddSimilar()
         {
             ToAdd = ToAdd?.Trim().ToLowerInvariant();
@@ -192,7 +193,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddExactCommand { get; }
+        public ICommand AddExactCommand { get; }
         public void AddExact()
         {
             ToAdd = ToAdd?.Trim().ToLowerInvariant();
@@ -210,7 +211,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddStartCommand { get; }
+        public ICommand AddStartCommand { get; }
         public void AddStart()
         {
             ToAdd = ToAdd?.Trim().ToLowerInvariant();
@@ -225,7 +226,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddEndCommand { get; }
+        public ICommand AddEndCommand { get; }
         public void AddEnd()
         {
             ToAdd = ToAdd?.Trim().ToLowerInvariant();
@@ -240,7 +241,7 @@ namespace FinderOuter.ViewModels
             }
         }
 
-        public IReactiveCommand AddContainCommand { get; }
+        public ICommand AddContainCommand { get; }
         public void AddContain()
         {
             ToAdd = ToAdd?.Trim().ToLowerInvariant();
