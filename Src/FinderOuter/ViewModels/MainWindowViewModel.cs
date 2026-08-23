@@ -93,6 +93,7 @@ namespace FinderOuter.ViewModels
 
         public Settings Settings { get; set; } = new();
         public IClipboard Clipboard { get; set; }
+        public ILauncher Launcher { get; set; }
 
         private IStorageProvider _sp;
         public IStorageProvider StorageProvider
@@ -129,7 +130,7 @@ namespace FinderOuter.ViewModels
 
         public void OpenAbout()
         {
-            WinMan.ShowDialog(new AboutViewModel(Clipboard));
+            WinMan.ShowDialog(new AboutViewModel(Clipboard, Launcher));
         }
     }
 }

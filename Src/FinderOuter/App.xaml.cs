@@ -27,6 +27,7 @@ namespace FinderOuter
                 {
                     DataContext = vm
                 };
+                vm.Launcher = desktop.MainWindow.Launcher;
                 vm.Clipboard = desktop.MainWindow.Clipboard;
                 vm.StorageProvider = desktop.MainWindow.StorageProvider;
             }
