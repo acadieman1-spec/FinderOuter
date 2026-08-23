@@ -100,7 +100,7 @@ namespace FinderOuter.ViewModels
                         {
                             SelectedInputType = InputTypeList.ElementAt(3);
                         }
-                        else if (value.Contains(" ") &&
+                        else if (value.Contains(' ') &&
                                  SelectedInputType.Value != Bip32PathService.SeedType.BIP39 &&
                                  SelectedInputType.Value != Bip32PathService.SeedType.Electrum)
                         {

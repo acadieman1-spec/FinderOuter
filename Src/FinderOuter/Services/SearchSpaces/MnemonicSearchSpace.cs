@@ -53,7 +53,7 @@ namespace FinderOuter.Services.SearchSpaces
             }
             else
             {
-                string[] words = mnemonic.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] words = mnemonic.Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 wordCount = words.Length;
                 if (!allowedWordLengths.Contains(words.Length))
                 {
