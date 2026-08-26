@@ -1,9 +1,8 @@
 ﻿<Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FinderOuter"
-             xmlns:vm="clr-namespace:FinderOuter.ViewModels"
-             xmlns:views="clr-namespace:FinderOuter.Views"
              xmlns:models="clr-namespace:FinderOuter.Models"
+             xmlns:views="clr-namespace:FinderOuter.Views"
+             xmlns:vm="clr-namespace:FinderOuter.ViewModels"
              x:Class="FinderOuter.App"
              RequestedThemeVariant="Default">
 
@@ -60,18 +59,6 @@
       <Setter Property="Height" Value="40"/>
       <Setter Property="Margin" Value="3"/>
       <Setter Property="MaxDropDownHeight" Value="300"/>
-    </Style>
-
-    <!--Use Classes="DescriptiveItem" in any ComboBox to represent its items as DescriptiveItem-->
-    <Style Selector="ComboBox.DescriptiveItem">
-      <Setter Property="ItemTemplate">
-        <Setter.Value>
-          <DataTemplate x:DataType="models:DescriptiveItem`1">
-            <TextBlock Text="{Binding Value}"
-                       ToolTip.Tip="{Binding Description}"/>
-          </DataTemplate>
-        </Setter.Value>
-      </Setter>
     </Style>
 
 

@@ -39,9 +39,15 @@
              Grid.Row="1"/>
     <ComboBox ItemsSource="{Binding CompareInputTypeList}"
               SelectedItem="{Binding SelectedCompareInputType}"
-              Classes="DescriptiveItem"
               Grid.Column="1"
-              Grid.Row="1"/>
+              Grid.Row="1">
+      <ComboBox.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Value}"
+                     ToolTip.Tip="{Binding Description}"/>
+        </DataTemplate>
+      </ComboBox.ItemTemplate>
+    </ComboBox>
 
     <Expander Header="Advanced (limit search space)" Grid.Column="0" Grid.Row="3">
       <Grid ColumnDefinitions="auto,*,auto" RowDefinitions="auto,*">
