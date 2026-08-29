@@ -32,7 +32,7 @@ namespace FinderOuter.Backend
             {
                 if (arr == null)
                 {
-                    throw new ArgumentNullException(nameof(arr), "Can't concatinate with null array(s)!");
+                    throw new ArgumentNullException(nameof(arrays), "Can't concatinate with null array(s)!");
                 }
                 len += arr.Length;
             }

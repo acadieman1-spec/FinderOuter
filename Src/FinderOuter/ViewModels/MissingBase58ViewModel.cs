@@ -124,19 +124,19 @@ namespace FinderOuter.ViewModels
         public ICommand AddLowerCommand { get; }
         private void AddLower()
         {
-            AddToList(B58SearchSpace.AllChars.Where(c => char.IsLower(c)));
+            AddToList(B58SearchSpace.AllChars.Where(char.IsLower));
         }
 
         public ICommand AddUpperCommand { get; }
         private void AddUpper()
         {
-            AddToList(B58SearchSpace.AllChars.Where(c => char.IsUpper(c)));
+            AddToList(B58SearchSpace.AllChars.Where(char.IsUpper));
         }
 
         public ICommand AddNumberCommand { get; }
         private void AddNumber()
         {
-            AddToList(B58SearchSpace.AllChars.Where(c => char.IsDigit(c)));
+            AddToList(B58SearchSpace.AllChars.Where(char.IsDigit));
         }
 
         public ICommand AddSimilarCommand { get; }
@@ -146,7 +146,8 @@ namespace FinderOuter.ViewModels
             if (!string.IsNullOrEmpty(ToAdd) && ToAdd.Length == 1)
             {
                 // Characters outside of Base58 charset are accepted here
-                if (!ConstantsFO.LowerCase.Contains(ToAdd.ToLower()) && !ConstantsFO.Numbers.Contains(ToAdd))
+                if (!ConstantsFO.LowerCase.Contains(ToAdd, StringComparison.CurrentCultureIgnoreCase) && 
+                    !ConstantsFO.Numbers.Contains(ToAdd))
                 {
                     Result.AddMessage("Invalid character (only letters and numbers are accepted).");
                 }

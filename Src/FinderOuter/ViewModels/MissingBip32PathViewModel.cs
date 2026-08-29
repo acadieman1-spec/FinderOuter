@@ -20,7 +20,7 @@ namespace FinderOuter.ViewModels
         public MissingBip32PathViewModel()
         {
             InputTypeList = ListHelper.GetEnumDescItems<Bip32PathService.SeedType>().ToArray();
-            WordListsList = Enum.GetValues(typeof(BIP0039.WordLists)).Cast<BIP0039.WordLists>();
+            WordListsList = Enum.GetValues<BIP0039.WordLists>();
             CompareInputTypeList = ListHelper.GetEnumDescItems(CompareInputType.PrivateKey).ToArray();
 
             SelectedInputType = InputTypeList.First();

@@ -313,7 +313,7 @@ namespace FinderOuter.ViewModels
             }
 
             Debug.Assert(exampleIndex != 0 && exampleIndex <= totalExampleCount);
-            Debug.Assert(!(exampleEnumerator.Current is null));
+            Debug.Assert(exampleEnumerator.Current is not null);
 
             ExampleButtonName = $"Example {exampleIndex}/{totalExampleCount}";
             return exampleEnumerator.Current;

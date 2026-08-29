@@ -115,7 +115,7 @@ namespace FinderOuter.ViewModels
         public ICommand AddNumberCommand { get; }
         private void AddNumber()
         {
-            AddToList(MiniKeySearchSpace.AllChars.Where(c => char.IsDigit(c)));
+            AddToList(MiniKeySearchSpace.AllChars.Where(char.IsDigit));
         }
 
         public ICommand AddSimilarCommand { get; }
@@ -125,7 +125,8 @@ namespace FinderOuter.ViewModels
             if (!string.IsNullOrEmpty(ToAdd) && ToAdd.Length == 1)
             {
                 // Characters outside of Base58 charset are accepted here
-                if (!ConstantsFO.LowerCase.Contains(ToAdd.ToLower()) && !ConstantsFO.Numbers.Contains(ToAdd))
+                if (!ConstantsFO.LowerCase.Contains(ToAdd, StringComparison.CurrentCultureIgnoreCase) && 
+                    !ConstantsFO.Numbers.Contains(ToAdd))
                 {
                     Result.AddMessage("Invalid character (only letters and numbers are accepted).");
                 }
