@@ -56,6 +56,7 @@
 
     <Grid ColumnDefinitions="130,*" Grid.Column="0" Grid.Row="3">
       <NumericUpDown Value="{Binding PassLength}"
+                     FormatString="N0"
                      Minimum="1"
                      PlaceholderText="Passphrase length"
                      Grid.Column="0"

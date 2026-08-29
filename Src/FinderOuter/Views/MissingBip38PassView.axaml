@@ -19,6 +19,7 @@
              Grid.Row="0"/>
 
     <NumericUpDown Value="{Binding PassLength}"
+                   FormatString="N0"
                    Minimum="1"
                    PlaceholderText="Passphrase length"
                    ToolTip.Tip="{Binding PassLenToolTip}"

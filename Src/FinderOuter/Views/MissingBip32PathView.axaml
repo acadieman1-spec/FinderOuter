@@ -45,7 +45,8 @@
       <TextBox Text="{Binding CompareInput}"
                PlaceholderText="Additional input (preferably a private key or public key, if not enter an address)"
                Grid.Column="0"/>
-      <NumericUpDown Text="{Binding Count}"
+      <NumericUpDown Value="{Binding Count}"
+                     FormatString="N0"
                      PlaceholderText="Number of child keys to derive"
                      Height="47"
                      Minimum="1"
