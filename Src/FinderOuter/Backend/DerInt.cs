@@ -225,7 +225,7 @@ namespace FinderOuter.Backend
         /// Converts this value to its byte array representation.
         /// </summary>
         /// <returns>An array of bytes in big-endian order</returns>
-        public byte[] ToByteArray()
+        public readonly byte[] ToByteArray()
         {
             if (badEncoding != null)
             {
@@ -316,7 +316,7 @@ namespace FinderOuter.Backend
         /// </summary>
         /// <param name="other">Other <see cref="DerInt"/> to compare to this instance.</param>
         /// <returns>-1 if smaller, 0 if equal and 1 if bigger.</returns>
-        public int CompareTo(DerInt other)
+        public readonly int CompareTo(DerInt other)
         {
             return value.CompareTo(other.value);
         }
@@ -328,11 +328,11 @@ namespace FinderOuter.Backend
         /// <exception cref="ArgumentException"/>
         /// <param name="obj">The object to compare to this instance.</param>
         /// <returns>-1 if smaller, 0 if equal and 1 if bigger</returns>
-        public int CompareTo(object obj)
+        public readonly int CompareTo(object obj)
         {
             if (obj is null)
                 return 1;
-            if (!(obj is DerInt))
+            if (obj is not DerInt)
                 throw new ArgumentException($"Object must be of type {nameof(DerInt)}");
 
             return CompareTo((DerInt)obj);
@@ -343,7 +343,7 @@ namespace FinderOuter.Backend
         /// </summary>
         /// <param name="other">Other <see cref="DerInt"/> value to compare to this instance.</param>
         /// <returns>true if the value is equal to the value of this instance; otherwise, false.</returns>
-        public bool Equals(DerInt other)
+        public readonly bool Equals(DerInt other)
         {
             return CompareTo(other) == 0;
         }
@@ -357,9 +357,9 @@ namespace FinderOuter.Backend
         /// true if value is an instance of <see cref="DerInt"/> 
         /// and equals the value of this instance; otherwise, false.
         /// </returns>
-        public override bool Equals(object obj)
+        public override readonly bool Equals(object obj)
         {
-            if (!(obj is DerInt))
+            if (obj is not DerInt)
                 throw new ArgumentException($"Object must be of type {nameof(DerInt)}");
 
             return Equals((DerInt)obj);
@@ -369,7 +369,7 @@ namespace FinderOuter.Backend
         /// Returns the hash code for this instance.
         /// </summary>
         /// <returns>A 32-bit signed integer hash code</returns>
-        public override int GetHashCode()
+        public override readonly int GetHashCode()
         {
             return value.GetHashCode();
         }
@@ -378,7 +378,7 @@ namespace FinderOuter.Backend
         /// Converts the value of the current instance to its equivalent string representation.
         /// </summary>
         /// <returns>A string representation of the value of the current instance</returns>
-        public override string ToString()
+        public override readonly string ToString()
         {
             return value.ToString();
         }
