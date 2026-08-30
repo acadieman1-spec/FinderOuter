@@ -1,0 +1,19 @@
+﻿[*.cs]
+
+# IDE0028: Simplify collection initialization
+dotnet_diagnostic.IDE0028.severity = silent
+
+# IDE0057: Use range operator
+dotnet_diagnostic.IDE0057.severity = silent
+
+# IDE0290: Use primary constructor
+dotnet_diagnostic.IDE0290.severity = silent
+
+# IDE0300: Simplify collection initialization (new C[] { ... } --> [...])
+dotnet_diagnostic.IDE0300.severity = silent
+
+# IDE0301: Simplify collection initialization (Array.Empty<T>() --> [])
+dotnet_diagnostic.IDE0301.severity = silent
+
+# IDE0305: Simplify collection initialization (ToArray() --> [..values]
+dotnet_diagnostic.IDE0305.severity = silent
