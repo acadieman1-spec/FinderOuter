@@ -1,6 +1,13 @@
 ### Next Release (future ideas)
-[Commits after previous release](https://github.com/Coding-Enthusiast/FinderOuter/compare/v0.20.0.0...master)  
+[Commits after previous release](https://github.com/Coding-Enthusiast/FinderOuter/compare/v0.21.0.0...master)  
 [RoadMap](https://github.com/Coding-Enthusiast/FinderOuter/issues/47)
+
+### Release 0.21.0 (2026-08-31)
+[Full Changelog](https://github.com/Coding-Enthusiast/FinderOuter/compare/v0.20.0.0...v0.21.0.0)  
+* Update `Bitcoin.Net` to its latest version and migrate the code to use the 64-bit implementation of ECC
+* Update target framework to `net10.0`
+* Removed a lot of obsolete/unused code
+* A bug fix, various code cleanups, some small code improvements and some UI fixes
 
 ### Release 0.20.0 (2024-11-13)
 [Full Changelog](https://github.com/Coding-Enthusiast/FinderOuter/compare/v0.19.1.0...v0.20.0.0)  
