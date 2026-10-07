@@ -277,7 +277,7 @@ you then import and trust — costs money. So matching is strict:
 
 ```bash
 pip install -e ".[dev]"
-pytest                                    # 293 tests, ~17 s
+pytest                                    # 294 tests, ~17 s
 KEYRESCUE_BACKEND=pure pytest               # same suite on the stdlib-only paths, ~60 s
 python tools/fetch_spec_vectors.py        # refresh BIP vectors from bitcoin/bips (needs network)
 python -m build                           # sdist + wheel
