@@ -1,0 +1,78 @@
+KeyRescue - licence
+==================
+
+Copyright (c) 2026 Acadieman.  All rights reserved.
+
+KeyRescue is commercial software.  Purchasing a licence grants permission to
+*use* it; it does not sell the source code.  If you received this file as part of
+a source distribution (for example the repository the product is built from), you
+are bound by the terms of the licence you agreed to when you obtained it.
+
+1. Grant of licence
+   A licence key authorises the named customer to install and run KeyRescue on up
+   to `seats` machines at the same time, for as long as the licence is valid.
+   Licences are perpetual unless the licence key carries an expiry date.
+
+2. Restrictions
+   You may not (a) redistribute, sublicense, sell, rent or host the software for
+   third parties; (b) remove, bypass, reverse-engineer or otherwise defeat the
+   licence verification, tier limits or any other protective mechanism, to the
+   extent such an act is prohibited by applicable law including the DMCA and
+   equivalent statutes; (c) use the software to attempt access to funds, accounts
+   or systems that you do not own or have no written authority to recover.
+
+3. Third-party attribution (required, reproduced here so it travels with the wheel)
+   Parts of this software implement published open standards (BIP-32, BIP-38,
+   BIP-39, BIP-173, BIP-340, BIP-341, BIP-350, BIP-49) and adapt algorithms from
+   the MIT-licensed FinderOuter project.  Its licence terms are reproduced below
+   and apply to those adapted parts; the full list of sources, word lists and
+   optional dependencies is in THIRD_PARTY_NOTICES.md, which must accompany any
+   build you redistribute.
+
+       MIT License
+
+       Copyright (c) 2020 Coding Enthusiast
+
+       Permission is hereby granted, free of charge, to any person obtaining a copy
+       of this software and associated documentation files (the "Software"), to deal
+       in the Software without restriction, including without limitation the rights
+       to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+       copies of the Software, and to permit persons to whom the Software is
+       furnished to do so, subject to the following conditions:
+
+       The above copyright notice and this permission notice shall be included in
+       all copies or substantial portions of the Software.
+
+       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+       IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+       FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+       AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+       LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+       SOFTWARE.
+
+4. Updates
+   Licence keys are version-agnostic: a key keeps working with newer builds signed
+   by the same vendor public key.  Major upgrades are sold separately unless your
+   purchase says otherwise.
+
+5. No warranty / limitation of liability
+   The software is provided "as it is", without warranty of any kind.  Key
+   recovery involves trying candidates against the blockchain's cryptography; a
+   failed or partial search does not entitle you to a refund of anything other than
+   what your consumer law requires, and the authors are not liable for lost coins,
+   lost time, or decisions taken on the basis of the output.  Always verify a
+   recovered key by checking the address it produces before moving funds.
+
+6. Termination
+   A licence may be revoked for a breach of these terms.  Revoking a licence stops
+   new runs from being authorised; it cannot undo anything you already did.
+
+7. Governing law
+   [JURISDICTION - fill in before selling.]
+
+---------------------------------------------------------------------------------
+This document is a template provided with the software for convenience and is not
+legal advice.  Have it reviewed for your jurisdiction and business model, then
+replace the bracketed placeholders.  The attribution requirements in section 3 are
+not optional and come from the licences of the projects this one builds on.

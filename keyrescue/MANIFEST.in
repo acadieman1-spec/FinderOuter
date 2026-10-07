@@ -1,0 +1,12 @@
+# Ship the licence, attribution and documentation in the source distribution.
+include README.md
+include LICENSE
+include THIRD_PARTY_NOTICES.md
+include pyproject.toml
+recursive-include src/keyrescue/data/wordlists *.txt
+recursive-include tests/vectors *.json
+include tools/keygen.py
+include tools/fetch_spec_vectors.py
+# never ship build noise or local state
+global-exclude __pycache__ *.py[cod] .pytest_cache .ruff_cache
+prune build dist *.egg-info

@@ -1,0 +1,12 @@
+{
+  "source": "https://en.bitcoin.it/wiki/Mini_private_key_format",
+  "note": "The sample key from the wiki article (the '_SAMPLE_PRIVATE_KEY_DO_NOT_IMPORT_' inflation the article shows has been removed, as in every implementation of the format).",
+  "vectors": [
+    {
+      "minikey": "S6c56bnXQiBjk9mqSYE7ykVQ7NzrRy",
+      "privkey_hex": "4C7A9640C72DC2099F23715D0C8A0D8A35F8906E3CAB61DD3F78B67BF887C9AB",
+      "wif_uncompressed": "5JPy8Zg7z4P7RSLsiqcqyeAF1935zjNUdMxcDeVrtU1oarrgnB7",
+      "address_uncompressed": "1CciesT23BNionJeXrbxmjc7ywfiyM4oLW"
+    }
+  ]
+}

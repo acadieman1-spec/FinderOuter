@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keyrescue"
+version = "0.1.0"
+description = "Offline recovery of your own Bitcoin keys, mnemonics and passphrases"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+authors = [{ name = "Acadieman" }]
+keywords = ["bitcoin", "recovery", "wallet", "mnemonic", "bip39", "bip38", "forensics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+]
+
+# The package runs with the standard library alone (pure Python secp256k1,
+# RIPEMD-160 and AES fallbacks). coincurve is a drop-in accelerator; install it
+# with: pip install "keyrescue[fast]"
+dependencies = []
+
+[project.optional-dependencies]
+fast = ["coincurve>=19.0.0"]
+crypto = ["pycryptodome>=3.19"]
+dev = ["pytest>=7.0", "pytest-timeout>=2.1", "coincurve>=19.0.0", "pycryptodome>=3.19"]
+
+[project.scripts]
+keyrescue = "keyrescue.cli:main"
+
+[project.urls]
+Homepage = "https://keyrescue.example.com"
+Documentation = "https://keyrescue.example.com/docs"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+keyrescue = ["data/wordlists/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+# install pytest-timeout to enable a hard per-test cap, e.g.
+#   pytest --timeout=600   (the BIP-38 tests are the slow ones: scrypt x 9 vectors)
