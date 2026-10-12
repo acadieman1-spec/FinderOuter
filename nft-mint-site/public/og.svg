@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CHROMAFIELD generative fields on Solana">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0710" />
+      <stop offset="1" stop-color="#140a1e" />
+    </linearGradient>
+    <radialGradient id="b1" cx="18%" cy="14%" r="58%">
+      <stop offset="0" stop-color="#ff4d6d" stop-opacity=".55" />
+      <stop offset="1" stop-color="#ff4d6d" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="b2" cx="84%" cy="10%" r="52%">
+      <stop offset="0" stop-color="#37e7ff" stop-opacity=".45" />
+      <stop offset="1" stop-color="#37e7ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="b3" cx="62%" cy="104%" r="60%">
+      <stop offset="0" stop-color="#a06bff" stop-opacity=".5" />
+      <stop offset="1" stop-color="#a06bff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff4d6d" />
+      <stop offset=".35" stop-color="#ffb03a" />
+      <stop offset=".62" stop-color="#b8ff4d" />
+      <stop offset="1" stop-color="#37e7ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#b1)" />
+  <rect width="1200" height="630" fill="url(#b2)" />
+  <rect width="1200" height="630" fill="url(#b3)" />
+  <g opacity=".9">
+    <circle cx="930" cy="315" r="150" fill="none" stroke="url(#word)" stroke-width="10" />
+    <circle cx="930" cy="315" r="196" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2" stroke-dasharray="10 16" />
+    <circle cx="930" cy="315" r="72" fill="#0a0710" />
+    <circle cx="930" cy="315" r="72" fill="none" stroke="url(#word)" stroke-width="4" />
+  </g>
+  <text x="84" y="286" font-family="Syne, Space Grotesk, Helvetica, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-4" fill="url(#word)">CHROMA</text>
+  <text x="84" y="392" font-family="Syne, Space Grotesk, Helvetica, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-4" fill="none" stroke="#f5f2fa" stroke-opacity=".55" stroke-width="1.6">FIELD</text>
+  <text x="86" y="452" font-family="Space Grotesk, Helvetica, Arial, sans-serif" font-size="27" fill="#f5f2fa" fill-opacity=".72">2,048 deterministic colour fields · minting on Solana</text>
+  <text x="86" y="546" font-family="JetBrains Mono, monospace" font-size="19" letter-spacing="5" fill="#b8ff4d">ALLOWLIST LIVE · 0.25 SOL</text>
+</svg>
