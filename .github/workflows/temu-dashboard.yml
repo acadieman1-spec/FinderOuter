@@ -1,0 +1,43 @@
+name: Temu dashboard
+
+# The dashboard in TemuDevDashboard/ is a dependency-free Node subproject. Its
+# 43 tests cover the Temu request-signing algorithm, the collection pipeline and
+# an HTTP end-to-end pass, so they are worth running on every PR.
+#
+# Scope: only paths under TemuDevDashboard/ trigger this; the .NET workflows are
+# untouched and still build ./Src/FinderOuter.sln as before.
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'TemuDevDashboard/**'
+      - '.github/workflows/temu-dashboard.yml'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'TemuDevDashboard/**'
+      - '.github/workflows/temu-dashboard.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: TemuDevDashboard
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        # node:test hooks + built-in fetch; no npm install needed (no dependencies)
+        node-version: '22'
+    - name: Show runtime
+      run: node --version
+    - name: Verify every source file parses
+      run: |
+        for f in server/*.js server/adapters/*.js public/*.js scripts/*.mjs test/*.js; do
+          node --check "$f"
+        done
+    - name: Test
+      run: npm test
