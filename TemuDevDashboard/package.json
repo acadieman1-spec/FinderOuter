@@ -1,0 +1,25 @@
+{
+  "name": "temu-dev-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Free, self-hosted developer dashboard for the Temu Partner API: request signing, order/settlement metrics, ads reporting, rate-limit tracking, webhook verification and an API explorer.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test test/*.test.js",
+    "gen:endpoints": "node scripts/gen-endpoints.mjs"
+  },
+  "keywords": [
+    "temu",
+    "partner-api",
+    "dashboard",
+    "affiliate",
+    "reporting",
+    "developer-tools"
+  ]
+}

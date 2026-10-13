@@ -1,0 +1,12 @@
+# runtime state (may contain settings; secrets only if ALLOW_SECRET_PERSIST=1)
+/data/
+
+# local environment
+.env
+
+# dependencies (the dashboard itself has none)
+node_modules/
+
+# logs / OS noise
+*.log
+.DS_Store
